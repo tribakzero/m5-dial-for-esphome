@@ -21,7 +21,7 @@ namespace esphome
                     resp.service = "light.turn_on";
                     
                     resp_kv.key = "entity_id";
-                    resp_kv.value = entity.c_str();
+                    resp_kv.value = entity.c_str() == "light.all" ? "all" : entity.c_str();
                     resp.data.push_back(resp_kv);
                     
                     resp_kv.key = "brightness_pct";
