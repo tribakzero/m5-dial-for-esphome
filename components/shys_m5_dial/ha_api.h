@@ -11,11 +11,7 @@ namespace esphome
                 esphome::api::HomeassistantServiceMap resp_kv;
 
                 void considerAllLights(String entity){
-                    if(entity == "light.all"){
-                        return "all";
-                    } else {
-                        return entity;
-                    }
+                    return entity == "light.all" ? "light.closet" : entity; # Should be `all` instead, but to prevent bothering
                 }
                 
             public:
