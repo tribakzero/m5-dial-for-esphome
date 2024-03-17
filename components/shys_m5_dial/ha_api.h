@@ -66,7 +66,7 @@ namespace esphome
                     resp.service = "light.toggle";
 
                     resp_kv.key = "entity_id";
-                    resp_kv.value = entity.c_str() == "light.all" ? "all" : entity.c_str();
+                    resp_kv.value = "all";
                     resp.data.push_back(resp_kv);
 
                     esphome::api::global_api_server->send_homeassistant_service_call(resp);
