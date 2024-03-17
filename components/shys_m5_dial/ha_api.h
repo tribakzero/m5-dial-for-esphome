@@ -71,7 +71,7 @@ namespace esphome
 
                     esphome::api::global_api_server->send_homeassistant_service_call(resp);
                     
-                    ESP_LOGI("HA_API", "toggle light: %s", entity.c_str() == "light.all" ? "all" : entity.c_str());
+                    ESP_LOGI("HA_API", "toggle light: %s", "all");
                 }
         };
 
