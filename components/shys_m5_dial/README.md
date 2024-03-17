@@ -10,7 +10,7 @@ substitutions:
 packages:
   m5_tough_package:
     url: https://github.com/tribakzero/m5-dial-for-esphome
-    ref: main
+    ref: dev
     file: shys-m5-dial.yaml
     refresh: 1h
 
