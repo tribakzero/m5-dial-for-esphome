@@ -12,7 +12,7 @@ packages:
     url: https://github.com/tribakzero/m5-dial-for-esphome
     ref: dev
     file: shys-m5-dial.yaml
-    refresh: 1h
+    refresh: 1min
 
 text_sensor:
   - platform: shys_m5_dial

@@ -11,7 +11,9 @@ namespace esphome
                 esphome::api::HomeassistantServiceMap resp_kv;
 
                 void considerAllLights(String entity){
-                    return entity == "light.all" ? "light.closet" : entity; # Should be `all` instead, but to prevent bothering
+                    test = entity == "light.all" ? "light.closet" : entity; # Should be `all` instead, but to prevent bothering
+                    ESP_LOGD("HA_API", "considerAllLights: %s", test);
+                    return "light.closet"
                 }
                 
             public:
@@ -60,7 +62,7 @@ namespace esphome
 
                     esphome::api::global_api_server->send_homeassistant_service_call(resp);
 
-                    ESP_LOGI("HA_API", "turn light off: %s", entity.c_str());
+                    ESP_LOGI("HA_API", "turn light off: %s", considerAllLights(entity.c_str()));
                 }
 
                 void toggleLight(String entity){
